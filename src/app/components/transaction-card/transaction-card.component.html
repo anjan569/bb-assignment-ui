@@ -1,0 +1,14 @@
+<div fxLayout="row" *ngIf="transactionDetails" class="card-container">
+    <div fxFlex="1%" [ngStyle]="{'background-color':transactionDetails.categoryCode, 'width': '5px'}"></div>
+    <div fxFlex="15%" class="dateBox"> {{transactionDetails?.dates?.valueDate | date: 'MMM, yy' }}</div>
+    <div fxFlex="80%" class="nameBox">
+        <div class="mainLabel"> {{transactionDetails?.merchant?.name }} </div>
+        <div class="subLabel"> {{transactionDetails?.transaction?.type }} </div>
+    </div>
+    <div fxFlex="10%" *ngIf="transactionDetails?.transaction?.creditDebitIndicator === 'CRDT'" class="crdtValue">
+        {{ transactionDetails?.transaction?.amountCurrency?.amount | currency: 'EUR':true | transactionPipe: 'CRDT' }}
+    </div>
+    <div fxFlex="10%" *ngIf="(transactionDetails?.transaction?.creditDebitIndicator === 'DBIT')" class="dbitValue">
+        {{ transactionDetails?.transaction?.amountCurrency?.amount | currency: 'EUR':true | transactionPipe: 'DBIT' }}
+    </div>
+</div>

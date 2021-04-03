@@ -1,0 +1,40 @@
+.crdtValue {
+    color: green;
+    display: flex;
+    align-items: center;
+}
+
+.dbitValue {
+    color: red;
+    display: flex;
+    align-items: center;
+}
+.card-container {
+    display: flex;
+    height: 80px;
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    display: block;
+    position: relative;
+}
+
+.subLabel {
+    color: #8B9298;
+    font-weight: 400;
+}
+
+.mainLabel{
+    color: #2F3236;
+    font-weight: 800;
+}
+
+.dateBox {
+    align-items: center;
+    display: flex;
+    padding: 5px;
+}
+
+.nameBox {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}

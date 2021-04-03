@@ -1,0 +1,19 @@
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    padding: 0px 5px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: #1976D2;
+    font-weight: 600;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+    height: 30px;
+  }
