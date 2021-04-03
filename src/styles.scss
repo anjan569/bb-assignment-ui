@@ -1,0 +1,73 @@
+
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: "Helvetica Neue", sans-serif;
+    background: url("assets/background.jpg") no-repeat;
+}
+
+.mat-card {
+    padding: 0px !important;
+    border-radius: 20px !important;
+}
+
+.mat-card .mat-card-header {
+    display: flex;
+    flex-direction: row;
+    background: #02A1E0;
+    color: #fff;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 10px;
+}
+
+.mat-card-content {
+    margin: 20px;
+}
+
+.footerDiv {
+    align-items: center;
+    text-align: center;
+    color: #02A1E0;
+    background: #ffffff;
+    font-style: italic;
+}
+
+.contentHolder {
+    margin:30px;
+    justify-content: center;
+
+}
+
+.mat-icon {
+    color: #ffffff;
+}
+
+
+.mat-card-header .mat-card-title {
+    display: flex;
+    margin: 8px;
+}
+
+.transferForm {
+    min-width: 98%;
+    padding: 10px;
+}
+
+.submitButton {
+    background-color: #EC6F31;
+    color: #ffffff;
+  }
+
+  
+.stage-actions-section {
+    display: flex !important;
+    flex-flow: row nowrap;
+    padding: 8px 10px 0px 0px !important;
+    justify-content: flex-end;
+    margin: 0px !important;
+}
+
+

@@ -1,0 +1,23 @@
+<div class="dailog-container">
+    <mat-card-header class="cardHeader">
+        <mat-card-title>Transfer Review</mat-card-title>
+        <mat-icon class="closeIcon" (click)="onCancle()">close</mat-icon>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <div mat-card-content>
+        <div fxLayout="column" fxLayoutGap="15px">
+            <mat-label class="refLabel"> Are you ready to send out this transfer?</mat-label>
+            <mat-label class="formlabel">It will be send to account:</mat-label>
+            <span>{{toAccount}}</span>
+            <mat-label class="formlabel">With the amount to:</mat-label>
+            <span>{{amount | currency: 'EUR':true }}</span>
+
+        </div>
+
+    </div>
+    <mat-divider></mat-divider>
+    <mat-card-actions class="actions">
+        <button mat-button (click)="onCancle()">Close</button>
+        <button mat-button class="submitButton" (click)="onSubmit()"> Submit</button>
+    </mat-card-actions>
+</div>

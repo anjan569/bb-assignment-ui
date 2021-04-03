@@ -1,0 +1,40 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <mat-icon>credit_card</mat-icon>Make Transfer
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div *ngIf="isSuccess" class="infoBox">
+      <span class="successMsg">Transaction completed!</span>
+      <mat-icon class="closeIcon" (click)="dismiss()">close</mat-icon>
+    </div>
+    <form class="transferForm" [formGroup]="transferForm">
+      <div fxLayout="column">
+          <mat-label>From Account</mat-label>
+          <mat-form-field appearance="outline" class="disabledField">
+            <input matInput formControlName="fromAccount" placeholder="Placeholder" disabled>
+          </mat-form-field>
+          <mat-label>To Account</mat-label>
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="toAccount" placeholder="Placeholder" required>
+          </mat-form-field>
+          <mat-error *ngIf="transferForm.get('toAccount').invalid && transferForm.get('toAccount').touched">This is required</mat-error> 
+     
+          <mat-label>Ammount</mat-label>
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="amount" placeholder="Placeholder" pattern="[0-9]*" (keyup)="checkBalance($event.target.value)">
+            <span matPrefix>
+              <mat-icon> euro_symbol</mat-icon>
+            </span>
+          </mat-form-field>
+          <mat-error *ngIf="transferForm.get('amount').hasError('MaxValue')">This is not enough balance</mat-error> 
+      </div>
+      <mat-card-actions class="stage-actions-section">
+        <button mat-button [disabled]="transferForm.invalid" class="submitButton" (click)="submitTransaction()">Submit</button>
+      </mat-card-actions>
+    </form>
+
+  </mat-card-content>
+
+</mat-card>
